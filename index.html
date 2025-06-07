@@ -10,55 +10,58 @@
 </head>
 
 <body class="bg-danger">
-    <div class="container-sm border text-white">
-        <h1 class="text-center my-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <div class="row">
-            <div class="col-3">
-                <label for="first_name" class="form-label">Nome</label>
-                <input id="first_name" type="text" class="form-control" aria-label="First name">
-            </div>
-
-            <div class="col-3">
-                <label for="second_name" class="form-label">Cognome</label>
-                <input id="second_name" type="text" class="form-control" aria-label="Second name">
-            </div>
-            <div class="col-3">
-                <label for="add_kilometers" class="form-label">Km</label>
-                <input id="add_kilometers" type="text" class="form-control" aria-label="add_kilometers">
-            </div>
-            <div class="col-3">
-                <label for="age_range" class="form-label">Fascia d'età</label>
-                <select id="age_range" class="form-select">
-                    <option selected>Seleziona</option>
-                    <option>Maggiorenne</option>
-                    <option>Over 65</option>
-                </select>
-            </div>
-            <div class="col-6">
-                <button id="calc_btn" type="button">Calcola</button>
-            </div>
-            <div class="col-6">
-                <button id="cancel_btn" type="button">Annulla</button>
-            </div>
+    <form action="">
+        <div class="container-sm border text-white">
+            <h1 class="text-center my-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             <div class="row">
-                <div class="col">
-
+                <div class="col-3">
+                    <label for="first_name" class="form-label">Nome</label>
+                    <input id="first_name" type="text" class="form-control" aria-label="First name">
                 </div>
-                <div class="col">
 
+                <div class="col-3">
+                    <label for="second_name" class="form-label">Cognome</label>
+                    <input id="second_name" type="text" class="form-control" aria-label="Second name">
                 </div>
-                <div class="col">
+                <div class="col-3">
+                    <label for="add_kilometers" class="form-label">Km</label>
+                    <input id="add_kilometers" type="text" class="form-control" aria-label="add_kilometers">
+                </div>
+                <div class="col-3">
+                    <label for="age_range" class="form-label">Fascia d'età</label>
+                    <select id="age_range" class="form-select">
+                        <option selected>Seleziona</option>
+                        <option value="17">Under 18</option>
+                        <option value="25">18-65</option>
+                        <option value="66">Over 65</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <button id="calc_btn" type="button">Calcola</button>
+                </div>
+                <div class="col-6">
+                    <button id="cancel_btn" type="button">Annulla</button>
+                </div>
+                <div class="row">
+                    <div class="col">
 
-                </div>
-                <div class="col">
+                    </div>
+                    <div class="col">
 
-                </div>
-                <div class="col">
+                    </div>
+                    <div class="col">
 
+                    </div>
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+                        <p>Risultato: <span id="result"></span></p>
+                    </div>
                 </div>
+
             </div>
 
-        </div>
 
 
 
@@ -74,12 +77,11 @@
 
 
 
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-            crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
