@@ -6,13 +6,14 @@ const secondName = document.getElementById("second_name");
 const addKm = document.getElementById("add_kilometers");
 const ageRange = document.getElementById("age_range");
 
+
 // bottoni "calcola" e "annulla"
 const calcBtn = document.getElementById("calc_btn");
 console.log(calcBtn);
 const cancBtn = document.getElementById("cancel_btn");
 
 // tipo di offerta applicata al biglietto
-let offerType = document.getElementById("offer_type").innerText;
+let offerType = document.getElementById("offer_type");
 
 // funzione collegata al click del bottono "calcola" che permette di calcolare il prezzo del biglietto
 calcBtn.addEventListener("click", (_event) => {
@@ -35,14 +36,18 @@ calcBtn.addEventListener("click", (_event) => {
     const discount20 = (ticketPrice * 20) / 100;
     const ticketPrice20 = (ticketPrice - discount40).toLocaleString('it-IT', { style: 'currency', currency: 'EUR' });
 
+    // prezzo del biglietto in base alla fascia d'età e tipo di offerta applicata al biglietto
     if (userAge < 18) {
         ticketPrice = ticketPrice20;
+        offerType.innerText = "Biglietto Young";
     }
     else if (userAge >= 65) {
         ticketPrice = ticketPrice40;
+        offerType.innerText = "Biglietto Senior";
     }
     else {
-        ticketPrice = ticketPriceEuro
+        ticketPrice = ticketPriceEuro;
+        offerType.innerText = "Biglietto Standard";
     }
 
     document.getElementById("price_result").innerText = ticketPrice;
@@ -54,17 +59,5 @@ calcBtn.addEventListener("click", (_event) => {
     document.getElementById("second_name_ticket").innerText = secondName.value; // stampo il cognome 
     document.getElementById("carriage_number").innerText = Math.floor(Math.random() * 10) + 1; // numero carrozza random
     document.getElementById("booking_code").innerText = Math.floor(Math.random() * 100000) + 1; // codice di prenotazione random
-
-    // tipo di offerta applicata al biglietto
-    if (userAge < 18) {
-        offerType = "Biglietto Young";
-    }
-    else if (userAge >= 65) {
-        offerType = "Biglietto Senior";
-    }
-    else {
-        offerType = "Biglietto Standard";
-    }
-
 
 })
