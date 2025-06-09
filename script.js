@@ -11,8 +11,11 @@ const calcBtn = document.getElementById("calc_btn");
 console.log(calcBtn);
 const cancBtn = document.getElementById("cancel_btn");
 
+// tipo di offerta applicata al biglietto
+let offerType = document.getElementById("offer_type").innerText;
+
 // funzione collegata al click del bottono "calcola" che permette di calcolare il prezzo del biglietto
-calcBtn.addEventListener("click", (event) => {
+calcBtn.addEventListener("click", (_event) => {
     // event.preventDefault();
     console.log("Cliccato");
 
@@ -42,5 +45,26 @@ calcBtn.addEventListener("click", (event) => {
         ticketPrice = ticketPriceEuro
     }
 
-    document.getElementById("result").innerText = ticketPrice;
+    document.getElementById("price_result").innerText = ticketPrice;
+})
+
+calcBtn.addEventListener("click", (_event) => {
+
+    document.getElementById("first_name_ticket").innerText = firstName.value; // stampo il nome del passeggero sul biglietto
+    document.getElementById("second_name_ticket").innerText = secondName.value; // stampo il cognome 
+    document.getElementById("carriage_number").innerText = Math.floor(Math.random() * 10) + 1; // numero carrozza random
+    document.getElementById("booking_code").innerText = Math.floor(Math.random() * 100000) + 1; // codice di prenotazione random
+
+    // tipo di offerta applicata al biglietto
+    if (userAge < 18) {
+        offerType = "Biglietto Young";
+    }
+    else if (userAge >= 65) {
+        offerType = "Biglietto Senior";
+    }
+    else {
+        offerType = "Biglietto Standard";
+    }
+
+
 })

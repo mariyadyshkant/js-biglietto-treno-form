@@ -11,69 +11,77 @@
 
 <body class="bg-danger">
     <form action="">
-        <div class="container-sm border text-white">
+        <div class="container text-white">
             <h1 class="text-center my-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <div class="row">
-                <div class="col-3">
-                    <label for="first_name" class="form-label">Nome</label>
-                    <input id="first_name" type="text" class="form-control" aria-label="First name">
-                </div>
-
-                <div class="col-3">
-                    <label for="second_name" class="form-label">Cognome</label>
-                    <input id="second_name" type="text" class="form-control" aria-label="Second name">
-                </div>
-                <div class="col-3">
-                    <label for="add_kilometers" class="form-label">Km</label>
-                    <input id="add_kilometers" type="text" class="form-control" aria-label="add_kilometers">
-                </div>
-                <div class="col-3">
-                    <label for="age_range" class="form-label">Fascia d'età</label>
-                    <select id="age_range" class="form-select">
-                        <option selected>Seleziona</option>
-                        <option value="17">Under 18</option>
-                        <option value="25">18-65</option>
-                        <option value="66">Over 65</option>
-                    </select>
-                </div>
-                <div class="col-6">
-                    <button id="calc_btn" type="button">Calcola</button>
-                </div>
-                <div class="col-6">
-                    <button id="cancel_btn" type="button">Annulla</button>
-                </div>
-                <div class="h1">IL TUO BIGLIETTO</div>
+            <div class="row bg-light rounded-2 py-3">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="h4">DETTAGLIO PASSEGGERI</div>
+                    <div class="col-3 text-center">
+                        <label for="first_name" class="form-label"><span class="text-danger">Nome</span></label>
+                        <input id="first_name" type="text" class="form-control" aria-label="First name">
                     </div>
-                    <div class="col-4">
-                        <p class="h6">NOME PASSEGGERO</p>
-                        <p></p>
+
+                    <div class="col-3 text-center">
+                        <label for="second_name" class="form-label"><span class="text-danger">Cognome</span></label>
+                        <input id="second_name" type="text" class="form-control" aria-label="Second name">
                     </div>
-                    <div class="col-2">
-                        <p>Offerta</p>
-                        <br>
-                        <span></span>
+                    <div class="col-3 text-center">
+                        <label for="add_kilometers" class="form-label"><span class="text-danger">Km</span></label>
+                        <input id="add_kilometers" type="text" class="form-control" aria-label="add_kilometers">
                     </div>
-                    <div class="col-2">
-                        <p>Carrozza</p>
-                        <br>
-                        <span></span>
-                    </div>
-                    <div class="col-2">
-                        <p>Codice CP</p>
-                        <br>
-                        <span></span>
-                    </div>
-                    <div class="col-2">
-                        <p>Costo biglietto</p>
-                        <br>
-                        <span id="result"></span>
+                    <div class="col-3 text-center">
+                        <label for="age_range" class="form-label"><span class="text-danger">Fascia d'età</span></label>
+                        <select id="age_range" class="form-select">
+                            <option selected>Seleziona</option>
+                            <option value="17">Under 18</option>
+                            <option value="25">18-65</option>
+                            <option value="66">Over 65</option>
+                        </select>
                     </div>
                 </div>
-
+                <div class="row justify-content-center mt-5">
+                    <div class="col-3">
+                        <button id="calc_btn" type="button"
+                            class="btn btn-outline-secondary rounded-4 px-4 py-1">Calcola</button>
+                    </div>
+                    <div class="col-3">
+                        <button id="cancel_btn" type="button"
+                            class="btn btn-outline-danger rounded-4 px-4 py-1">Annulla</button>
+                    </div>
+                </div>
             </div>
+            <div class="h1 my-4 text-center">IL TUO BIGLIETTO</div>
+            <div class="row bg-light rounded-2 py-3 text-dark">
+                <div class="col-12 border-bottom border-secondary">
+                    <div class="h4">DETTAGLIO PASSEGGERI</div>
+                </div>
+                <div class="col-4">
+                    <p class="h6">NOME PASSEGGERO</p>
+                    <span id="first_name_ticket"></span>
+                    <span id="second_name_ticket"></span>
+                </div>
+                <div class="col-2">
+                    <p>Offerta</p>
+                    <br>
+                    <span id="offer_type"></span>
+                </div>
+                <div class="col-2">
+                    <p>Carrozza</p>
+                    <br>
+                    <span id="carriage_number"></span>
+                </div>
+                <div class="col-2">
+                    <p>Codice CP</p>
+                    <br>
+                    <span id="booking_code"></span>
+                </div>
+                <div class="col-2">
+                    <p>Costo biglietto</p>
+                    <br>
+                    <span id="price_result"></span>
+                </div>
+            </div>
+
+        </div>
 
 
 
